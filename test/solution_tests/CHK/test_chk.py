@@ -11,18 +11,22 @@ from solutions.CHK import checkout_solution
 class TestChk():
 
     def test_invalid_input(self):
-        assert checkout_solution('1') == -1
-        assert checkout_solution('E') == -1
+        assert checkout_solution.checkout('1') == -1
+        assert checkout_solution.checkout('E') == -1
 
     def test_individual_sku(self):
-        assert checkout_solution('A') == 50
-        assert checkout_solution('B') == 30
-        assert checkout_solution('C') == 20
-        assert checkout_solution('D') == 15
+        assert checkout_solution.checkout('A') == 50
+        assert checkout_solution.checkout('B') == 30
+        assert checkout_solution.checkout('C') == 20
+        assert checkout_solution.checkout('D') == 15
 
     def test_special_offers(self):
-        assert checkout_solution('AAA') == 130
-        assert checkout_solution('BB') == 45
-        assert checkout_solution('AAAA') == 180
-        assert checkout_solution('AAAAA') == 230
-        assert checkout_solution('AAAAAA') == 260
+        assert checkout_solution.checkout('AAA') == 130
+        assert checkout_solution.checkout('BB') == 45
+        assert checkout_solution.checkout('AAAA') == 180
+        assert checkout_solution.checkout('AAAAA') == 230
+        assert checkout_solution.checkout('AAAAAA') == 260
+
+    def test_combined(self):
+        assert checkout_solution.checkout('ABCD') == 115
+        assert checkout_solution.checkout('ABCBD') == 120
