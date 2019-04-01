@@ -14,6 +14,10 @@
 
 def checkout(skus):
     try:
-        for sku in skus
+        for sku in skus:
+            pass
+    except:
+        pass
     return -1
+
 
