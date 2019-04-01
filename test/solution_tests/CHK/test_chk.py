@@ -7,7 +7,8 @@ from solutions.CHK import checkout_solution
 | B    | 30    | 2B for 45      |
 | C    | 20    |                |
 | D    | 15    |                |
-+------+-------+----------------+"""
++------+-------+----------------+
+"""
 class TestChk():
 
     def test_invalid_input(self):
@@ -30,3 +31,4 @@ class TestChk():
     def test_combined(self):
         assert checkout_solution.checkout('ABCD') == 115
         assert checkout_solution.checkout('ABCBD') == 120
+
